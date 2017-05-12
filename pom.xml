@@ -164,7 +164,7 @@
 
     <scm>
     <url>https://github.com/mpbrenlla/maven-sample.git</url>
-    <connection>scm:git:git://github.com/mpbrenlla/maven-sample.git</connection>
+    <connection>scm:git:git@github.com/mpbrenlla/maven-sample.git</connection>
     <tag>release-1.0.0</tag>
   </scm>
 
