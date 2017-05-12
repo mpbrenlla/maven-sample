@@ -163,11 +163,11 @@
   <distributionManagement>
         <snapshotRepository>
             <id>snapshots-test</id>
-            <url>http://localhost:8081/nexus/repository/snapshots</url>
+            <url>http://localhost:8081/nexus/content/repositories/snapshots</url>
         </snapshotRepository>
         <repository>
             <id>releases-local</id>
-            <url>http://localhost:8081/nexus/repository/releases</url>
+            <url>http://localhost:8081/nexus/content/repositories/releases/</url>
         </repository>
     </distributionManagement>
 
