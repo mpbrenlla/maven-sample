@@ -5,7 +5,7 @@
   <groupId>com.example.maven-samples</groupId>
   <artifactId>single-module-project</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.2-SNAPSHOT</version>
+  <version>1.0.4-SNAPSHOT</version>
   <name>A Single Maven Module</name>
   <description>Sample single module Maven project with a working, deployable site.</description>
   <url>http://www.example.com</url>
@@ -163,11 +163,11 @@
   <distributionManagement>
         <snapshotRepository>
             <id>snapshots-test</id>
-            <url>http://localhost:8081/repository/maven-snapshots</url>
+            <url>http://localhost:8081/repository/snapshots</url>
         </snapshotRepository>
         <repository>
             <id>releases-local</id>
-            <url>http://localhost:8081/repository/maven-releases</url>
+            <url>http://localhost:8081/repository/releases</url>
         </repository>
     </distributionManagement>
 
