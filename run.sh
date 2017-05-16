@@ -12,11 +12,13 @@
 # CHANGE THESE BEFORE RUNNING THE SCRIPT!
 
 # The next development version
-developmentVersion=$(mvn org.apache.maven.plugins:maven-help-plugin:2.1.1:evaluate -Dexpression=project.version | grep -v '\[')
+#developmentVersion=$(mvn org.apache.maven.plugins:maven-help-plugin:2.1.1:evaluate -Dexpression=project.version | grep -v '\[')
 
 # The version to be released
-releaseVersion=${developmentVersion%-SNAPSHOT}
+#releaseVersion=${developmentVersion%-SNAPSHOT}
 
+developmentVersion='1.0.8-SNAPSHOT'
+releaseVersion='1.0.7'
 
 # Start the release by creating a new release branch
 git checkout -b release/$releaseVersion develop
