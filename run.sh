@@ -12,31 +12,34 @@
 # CHANGE THESE BEFORE RUNNING THE SCRIPT!
 
 # The next development version
-developmentVersion=$(mvn org.apache.maven.plugins:maven-help-plugin:2.1.1:evaluate -Dexpression=project.version | grep -v '\[')
+#developmentVersion=$(mvn org.apache.maven.plugins:maven-help-plugin:2.1.1:evaluate -Dexpression=project.version | grep -v '\[')
 
 # The version to be released
-releaseVersion=${developmentVersion%-SNAPSHOT}
+#releaseVersion=${developmentVersion%-SNAPSHOT}
+
+developmentVersion=1.0.11-SNAPSHOT
+releaseVersion=1.0.10
 
 
 # Start the release by creating a new release branch
-git checkout -b release/$releaseVersion develop
+git checkout -b release/$releaseVersion development
 
 # The Maven release
 mvn --batch-mode release:prepare release:perform  -DreleaseVersion=$releaseVersion -DdevelopmentVersion=$developmentVersion
 
 # Clean up and finish
-# get back to the develop branch
-git checkout develop
+# get back to the development branch
+git checkout development
 
-# merge the version back into develop
-git merge --no-ff -m "$scmCommentPrefix Merge release/$releaseVersion into develop" release/$releaseVersion
+# merge the version back into development
+git merge --no-ff -m "$scmCommentPrefix Merge release/$releaseVersion into development" release/$releaseVersion
 # go to the master branch
 git checkout master
 # merge the version back into master but use the tagged version instead of the release/$releaseVersion HEAD
 git merge --no-ff -m "$scmCommentPrefix Merge previous version into master to avoid the increased version number" release/$releaseVersion~1
 # Removing the release branch
 git branch -D release/$releaseVersion
-# Get back on the develop branch
-git checkout develop
+# Get back on the development branch
+git checkout development
 # Finally push everything
 git push --all && git push --tags
