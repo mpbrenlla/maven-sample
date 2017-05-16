@@ -5,7 +5,7 @@
   <groupId>com.example.maven-samples</groupId>
   <artifactId>single-module-project</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.8-SNAPSHOT</version>
+  <version>1.0.8</version>
   <name>A Single Maven Module</name>
   <description>Sample single module Maven project with a working, deployable site.</description>
   <url>http://www.example.com</url>
@@ -165,6 +165,7 @@
     <scm>
     <url>https://github.com/mpbrenlla/maven-sample.git</url>
     <connection>scm:git:git@github.com:mpbrenlla/maven-sample.git</connection>
+    <tag>v1.0.8</tag>
   </scm>
 
   <distributionManagement>
