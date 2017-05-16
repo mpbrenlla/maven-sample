@@ -17,8 +17,8 @@
 # The version to be released
 #releaseVersion=${developmentVersion%-SNAPSHOT}
 
-developmentVersion='1.0.8-SNAPSHOT'
-releaseVersion='1.0.7'
+developmentVersion='1.0.9-SNAPSHOT'
+releaseVersion='1.0.8'
 
 # Start the release by creating a new release branch
 git checkout -b release/$releaseVersion develop
